@@ -1,0 +1,654 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Outing.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="{%static 'css/owl.carousel.min.css '%}" rel="stylesheet">
+  <link href="{%static 'css/owl.theme.default.min.css'%}" rel="stylesheet">
+  <link href="{% static 'css/animate.min.css'%}" rel="stylesheet">
+  <link href="{%static 'css/animate.css'%}" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+<script src="{%static 'JS/owl.carousel.min.js'%}"></script>
+  
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif
+  padding:0;
+  margin:0;
+  }
+  .w3-tangerine {
+  font-family: "Tangerine", serif;
+}
+.w3-lobster {
+  font-family: "Lobster", Sans-serif;
+}
+
+.w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.myLink {display: none}
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  .bg-img {
+ /* The image used */
+  background-image: url("D:/Images/Background.jpg");
+
+  min-height: 150px;
+    padding: 71px 0 65px 0;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+
+}
+/* Make the image fully responsive */
+  #demo.carousel-inner img {
+      width: 100%;
+      height: auto;
+	  margin:0;
+  }
+  
+    #carouselExampleControls.carousel-inner banner
+	{
+	 width: 100%;
+      height: auto;
+	  margin:0;
+	}
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 768px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+	  .carousal-caption{
+padding-bottom:120px;
+
+}
+.carousal-caption h2{
+  font-size:25px;
+
+}
+
+    }
+	#demo.carousel-control-prev, .carousel-control-next {
+            color: pink;
+            opacity: 1!important;
+          }
+        
+	#testimonial .container-fluid
+	{
+	  padding:50px;
+	  background-color:#C0C0BA;
+	 min-height:500px
+	 width:100%;
+	}
+	.card-carousel
+	{
+	  padding:100px;
+	  background-color:#C0C0BA;
+	 min-height:500px
+	}
+	.img-box
+	{
+	  width:135px;
+	  height:135px;
+	
+	}
+	#demo1.carousel-control-prev
+    {
+	  left:-50px;
+	}
+	#demol.carousel-control-next
+    {
+	  right:-50px;
+	}
+	#demo1.carousel-indicators
+	{
+	
+	bottom:50px;
+	}
+	 #owl-demo .item{
+  padding: 10px 0px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.banner
+{ 
+-webkit-background-size:cover;
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+height:100vh;
+
+}
+
+.carousal-caption{
+padding-bottom:300px;
+font-family:poppins;
+Bottom: 60%;
+transform: translateY(40%);
+}
+.carousal-caption h2{
+  font-size:70px;
+  text-trasform:uppercase;
+  font-weight:bold;
+
+}
+.carousal-caption h3{
+  font-size:25px;
+  font-family:sans-serif;
+  font-style: italic
+  font-weight:bold;
+  color:#FFF8DC;
+  
+
+}
+.carousal-caption a{
+background-color: #ff571a;
+padding:15px 35px;
+display:inline-block;
+margin-top:15px;
+font-color:;
+text-transform:uppercase;
+border-radius:25px;
+
+
+}
+#demo2.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+  max-height:100px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  font-size:20px;
+  font-family:sans-serif;
+  font-style: italic
+  font-weight:bold;
+  font-color:#0d0d0d
+}
+.contact-form
+{
+backgorund:rgba(0,0,0,.6);
+padding:20px;
+
+}
+#carouselExampleControls.carousal
+{
+ position: relative;
+ width: 100%;
+ padding-top: 100%; /* 1:1 Aspect Ratio */
+
+}
+
+  </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md bg-light navbar-light fixed-right">
+  <a class="navbar-brand" href="HomePage.html"><p class="w3-tangerine w3-xlarge">Outing.com</p></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+   <ul class="navbar-nav" >
+   <li class="nav-item">
+      <a class="nav-link" href="#">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="aboutus.html">ABOUT US</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        DESTINATIONS
+      </a>
+	  
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="Bhutan.html">Bhutan</a>
+        <a class="dropdown-item" href="#section42">Darjeeling</a>
+        <a class="dropdown-item" href="#section41">North Skim</a>
+        <a class="dropdown-item" href="#section42">Old SilkRout</a>
+		<a class="dropdown-item" href="#section41">West Sikim</a>
+        <a class="dropdown-item" href="#section42">Himachal Pradesh</a>
+		<a class="dropdown-item" href="#section41">Uttarakhand</a>
+        <a class="dropdown-item" href="#section42">Goa</a>
+		<a class="dropdown-item" href="#section41">Kerala</a>
+        <a class="dropdown-item" href="#section42">Rajasthan</a>
+   
+      </div>
+      
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         PACKAGES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="BhutanPackage.html">BhutanPackages</a>
+        <a class="dropdown-item" href="SikimPackage.html">SikimPackages</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         HOTELS AND RESORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         OFFBEAT
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+	 <li class="nav-item">
+      <a class="nav-link" href="#section1">CONTACT US</a>
+    </li>
+  </ul>
+  </div>
+  </div>  
+</nav>
+
+
+<!-- ImageSlider------>
+<div id="headslider"  class="container-fluid text-center" > 
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+	<div class="banner " style="background-image:url({%static "images/nainital1.jpg" %})">
+    <div class="carousal-caption">
+	<h2 class="animated bounceInRight" style="animation-delay: 1s ;color:#9ACD32">Astounding Uttarakhand</h2>
+	<h3 class="animated fadeOutUo" style="animation-delay: 2s"> “To Travel is to Live”– Hans Christian Andersen</h3>
+	<p class="animated bounceInDown" style="animation-delay: 3s"><a href="#">View More</a></p>
+	</div>
+	</div>
+    </div>
+    <div class="carousel-item">
+	<div class="banner " style="background-image:url({% static "images/Bhutan1.jpg"%})">
+    <div class="carousal-caption">
+	<h2 class="animated bounceInLeft" style="animation-delay: 1s;color:#ff8c00"> Amazing  Bhutan</h2>
+	<h3 class="animated fadeOutUo" style="animation-delay: 2s"> “Travel makes one modest; you see what a
+	tiny place you occupy in the world.” — Gustave Flaubert</h3>
+	<p class="animated bounceInUp" style="animation-delay: 2s"><a href="Bhutan.html" >View More</a></p>
+	</div>
+	</div>
+    </div>
+    <div class="carousel-item">
+    <div class="banner " style="background-image:url({% static "images/sikkim.jpg"%})">
+    <div class="carousal-caption">
+	<h2 class="animated bounceInLeft" style="animation-delay: 1s;color:#00cccc"> Magistic Sikkim</h2>
+	<h3 class="animated fadeOutUo" style="animation-delay: 2s">  “The world is a book, and those who do
+	not travel read only a page.” — Saint Augustine</h3>
+	<p class="animated bounceInUp" style="animation-delay: 2s"><a href="#" >View More</a></p>
+	</div>
+    </div>
+	</div>
+	<div class="carousel-item">
+    <div class="banner" style="background-image:url({% static "images/rajasthan.jpg"%})">
+    <div class="carousal-caption">
+	<h2 class="animated bounceInLeft" style="animation-delay: 1s;color:#00cccc">Incredible Rajasthan</h2>
+	<h3 class="animated fadeOutUo" style="animation-delay: 2s"> “To Travel is to Live” – Hans Christian Andersen</h3>
+	<p class="animated bounceInUp" style="animation-delay: 2s"><a href="#" >View More</a></p>
+	</div>
+    </div>
+	</div>
+ 
+</div>
+</div>
+<div class="container-fluid">   
+ <div class="row content">
+    
+    <div class="col-md-9 text-left" style="background-color:#00e699"> 
+      <h1 class="w3-lobster w3-jumbo font-effect-brick-sign" style="color:#99004d">WELCOME TO Outing.com</h1>
+	  <h2 class="w3-tangerine w3-xxlarge">Travel with us and explore </h2>
+	  <p class="w3-myfont">Choosing a right travel partner is as important as choosing right destination.Our team works continuously
+	  to make your holiday momentous .</p>
+	 <h3 class="w3-tangerine w3-xxlarge"> Why should one consider Outing.com for there travel plan?</h3>
+      <p class="w3-myfont">The answer is our commitment to provide excellent service,best pricing,guests satisfaction.
+      We arrange group trips with fixed plans and personalised tour with felxible tour plan,has specialization 
+	  in budget holidays,economy package or premium package with no hidden cost.Finaly we commit 
+	  you to provide excellent experience towards your dream trip</p>
+      
+</div>
+
+    <div class="col-md-3 sidenav">
+	<div class="container" >
+	<div id="demo2" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner " >
+    <div class="carousel-item active">
+     <div class="card">
+  <img src="{%static 'images/contact.jpg'%}" alt="John" style="width:100%">
+  <h1 class="w3-tangerine w3-xxlarge">Outing.com</h1>
+  <p class="title">Conntact No.8296308487</p>
+  </div>
+  </div>
+       <div class="carousel-item">
+         <div class="card">
+  <img src="{%static 'images/contact.jpg'%}" alt="John" style="width:100%">
+  <h1 class="w3-tangerine w3-xxlarge">Outing.com</h1>
+  <p class="title">Conntact No.7003659185</p>
+  </div>
+</div>
+      <div class="carousel-item">
+           <div class="card">
+  <img src="{%static 'images/contact.jpg'%}" alt="John" style="width:100%">
+  <h1 class="w3-tangerine w3-xxlarge">Outing.com</h1>
+  <p class="title">Conntact No.8296308487</p>
+  
+</div>
+  </div>
+  <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo1" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+  </div>
+</div>
+<div class="container-fluid" style="background-color:#8d883f">
+<div id="owl-demo" class="owl-carousel owl-theme">
+          
+  <div class="item">
+  <div class="card" style="background-color:#264040;font-color: #0d0d0d ;height:550px" >
+    <h1 class="title">Gangtok with Northsikim</h1>
+    <img class="card-img-top " src="{%static 'images/northsikim2.jpg'%}" alt="Card image cap">
+    <p class="title">4N/5D(NJP-NJP)(Gangtok 2N/Lachen 1N/Lachung 1N)</p>
+    <p class="title">Rs8,000.00PP(Min 8 Heads)</p>
+    <p class="title">Rs16,800.00PP(Min 6 Heads)</p>
+    <p class="title">Rs7,000.00PP(Min 4 Heads)</p>
+    <p class="title">Journey Date:Any Day</p>
+        </div>  
+  </div>
+  <div class="item" >
+ <div class="card" style="background-color:#40367c;font-color: #0d0d0d ;height:550px" >
+ <h1 class="title">Himachal with Amritsar</h1>
+  <img src="{%static 'images/manali.jpg'%}" alt="John" style="width:100%">
+  <p class="title">13N/14D(Shimla-2N/Manali-3N/Dharamshala-1N/Dalhouse-2N/Amritsar-1N)</p>
+  <p class="title">Rs16,000.00PP(Triple Sharing)</p>
+  <p class="title">Rs16,800.00PP(Double Sharing)</p>
+  <p class="title">Rs7,000.00PP(Child 5 to 8 Years)</p>
+  <p class="title">Journey Date 08.10.19</p>
+  </div>
+  </div>
+  <div class="item">
+  <div class="card" style="background-color:#0059b3;font-color #0d0d0d ;height:550px" >
+ <h1 class="title">Nainital</h1>
+  <img src="{%static 'images/nainital.jpg'%}" alt="John" style="width:100%">
+  <p class="title">12N/13D(Jim Corbet-1N/Nainital-2N/Kousani-1N/Munsiyari-2N/Chakouri-1N/Almora-1N)</p>
+  <p class="title">Rs13,000.00PP(Triple Sharing)</p>
+  <p class="title">Rs14,000.00PP(Double Sharing)</p>
+  <p class="title">Rs7,000.00PP(Child 5 to 8 Years)</p>
+  <p class="title">Journey Date 13.12.19</p>
+  </div>
+  </div>
+  <div class="item">
+   <div class="card" style="background-color:#cb3434;font-color:#404040 ;height:550px" >
+ <h1 class="title">Bhutan</h1>
+  <img src="{%static 'images/bhutan.jpg'%}" alt="John" style="width:100%">
+  <p class="title">5N/6D(Hasimara to Hasimara)(Jaigaon 1N/Thimu 2N/Paro 2N)</p>
+    <p class="title">Rs13,800.00PP(With Meal)/Rs.9300.00PP(Without Meal)(Min 8 Heads)</p>
+    <p class="title">Rs15,500.00PP(With Meal)/Rs.10500.00PP(Without Meal)(Min 6 Heads)</p>
+    <p class="title">Journey Date:Any Day</p>
+  </div>
+  </div>
+  
+  <div class="item">
+  <div class="card" style="background-color: #cccc00;font-color:#404040 ;height:550px" >
+ <h1 class="title">Goa</h1>
+  <img src="{%static 'images/goa.jpg'%}" alt="John" style="width:100%">
+  <p class="title">7N/8D(Goa 4N)</p>
+   <p class="title">Rs8,500.00PP(Triple Sharing)</p>
+  <p class="title">Rs9,000.00PP(Double Sharing)</p>
+  <p class="title">Rs4,000.00PP(Child 5 to 8 Years)</p>
+  <p class="title">Journey Date 02.11.19 &11.01.2020</p>
+  </div>
+  </div>
+  <div class="item">
+  <div class="card" style="background-color:#91b6d4;font-color:#404040 ;height:550px" >
+ <h1 class="title">Rajasthan</h1>
+  <img src="{%static 'images/rajastha1.jpg'%}" alt="John" style="width:100%">
+  <p class="title">13N/14D(Jodhpur-1N/Jaisalmer-2N/MountAbu-1N/Udaipur-2N/Puskar-1N/Jaipur-2N)</p>
+   <p class="title">Rs16,500.00PP(Triple Sharing)</p>
+  <p class="title">Rs17,500.00PP(Double Sharing)</p>
+  <p class="title">Rs8,000.00PP(Child 5 to 8 Years)</p>
+  <p class="title">Journey Date 16.10.2019</p>
+  </div>
+  </div>
+  <div class="item">
+   <div class="card" style="background-color: #d3a15f;font-color:#404040 ;height:550px" >
+ <h1 class="title">Old Silk Route</h1>
+  <img src="{%static 'images/zigzagroad.jpg'%}" alt="John" style="width:100%">
+  <p class="title">3N/4D(NJP-NJP)
+    <p class="title">Rs4,800.00PP(Min 8 Heads)</p>
+    <p class="title">Rs5,350.00(Min 6 Heads)</p>
+	<p class="title">Rs7,100.00(Min 6 Heads)</p>
+	<p class="title">Journey Date:Any Day</p>
+  </div>
+  </div>
+  <div class="item">
+  <div class="card" style="background-color:#1fc71f;font-color:#1fc71f ;height:550px" >
+ <h1 class="title">Bhutan</h1>
+  <img src="{%static 'images/bhutan.jpg'%}" alt="John" style="width:100%">
+  <p class="title">6N/7D(Hasimara to Hasimara)(Jaigaon 1N-Thimu 2N-Punakha 2N-Paro 2N)</p>
+    <p class="title">Rs13,800.00PP(With Meal)/Rs.9300.00PP(Without Meal)(Min 8 Heads)</p>
+    <p class="title">Rs15,500.00PP(With Meal)/Rs.10500.00PP(Without Meal)(Min 6 Heads)</p>
+    <p class="title">Journey Date:Any Day</p>
+  </div>
+  </div>
+  <div class="item">
+  <div class="card" style="background-color: #f73722;font-color:#1fc71f ;height:550px" >
+ <h1 class="title">Kerala With KanyaKumari </h1>
+  <img src="{%static 'images/keralanature.jpg'%}" alt="John" style="width:100%">
+  <p class="title">12N/13D(Kanyakumari-2N/Kovalam-2N/Alleppey-1N/Thekady-1N/Munnar-2N)</p>
+   <p class="title">Rs16,000.00PP(Triple Sharing)</p>
+  <p class="title">Rs17,000.00PP(Double Sharing)</p>
+  <p class="title">Rs8,000.00PP(Child 5 to 8 Years)</p>
+  <p class="title">Journey Date 20.11.2019</p>
+  </div>
+  </div>
+ 
+</div>
+</div>
+
+
+ <!-- Contact -->
+
+  <div class="container-fluid contact-form" style="background-color:#4b79b4">
+  
+  <h2>Contact</h2>
+  <hr>
+  <div class="row">
+    
+	<div class="col-md-6">
+	<div class="jumbotron text-center">
+	<h2>City Office</h2>
+	<hr>
+   <p>"Taz  House" 33 Madhya para
+	         Raynagar,kolkata-70
+    </p>
+	<h2>Contact No-8296308487</h2>
+</div>
+ </div>
+	<div class="col-md-6">
+    <div class="form-group">
+	<label>Name</label><input type="text" class="form-control">
+	</div>
+	 <div class="form-group">
+	<label>Phone Number</label><input type="text" class="form-control">
+	</div>
+	<div class="form-group">
+	<label>Email</label><input type="text" class="form-control">
+	</div>
+	<div class="form-group">
+	<label>Message</label><textarea  class="form-control" rows="5"></textarea>
+	</div>
+	<div class="form-group">
+	<button class="btn btn-primary btn-block">Submit</button>
+	</div>
+	</div>
+  </div>
+  </div>
+<section id="testimonial">
+	  <div class="container-fluid" >
+	   <div class="row">
+	     <div class="col-xs-4">
+		 
+		 <h2 class="text-center title text-dark"><strong>Testimonials</strong></h2>
+		 <div id="demo1" class="carousel slide" data-ride="carousel">
+      
+  <div class="carousel-inner " >
+    <div class="carousel-item active">
+          <div class="img-box border rounded-circle m-auto">
+		 <img src="{%static 'images/profil1.jpg'%}" class="d-block w-100 rounded-circle">
+		 
+		 </div>
+		  <h5 class="py-1 my-1 text-center"><strong class="text-warning text-uppercase">Sanjay Nandy</strong></h5>
+		  <p class="pt-3 text-white">I was searching a destination for Holiday and after scanning through a lot of available 
+		  options we zeroed in on Bhutan the 1st country on Happiness index. Then the search began for popular travels conducting 
+		  tours to Bhutan and to my shock I found that not many popular players conduct tours to Bhutan. Once while I was scanning through 
+		  the internet i came across the site of "Naturewings" and sent an inquiry for one of the tour packages and I got a call from the director 
+		  
+		  .</p>
+		 </div>
+       
+  
+    <div class="carousel-item">
+         <div class="img-box border rounded-circle m-auto">
+		 <img src="{%static 'images/Testimonial4.jpg'%}" class="d-block w-100 rounded-circle">
+		 
+		 </div>
+		  <h5 class="py-1 my-1 text-center"><strong class="text-warning text-uppercase">Priyanka Sarkar</strong></h5>
+		  <p class="pt-3 text-white">I was searching a destination for a holday and after scanning through a lot of available 
+		  options we zeroed in on Bhutan the 1st country on Happiness index. Then the search began for popular travels conducting 
+		  tours to Bhutan and to my shock I found that not many popular players conduct tours to Bhutan. Once while I was scanning through 
+		  the internet i came across the site of "Naturewings" and sent an inquiry for one of the tour packages and I got a call from the director 
+		 
+		  </p>
+		 </div>
+      
+    <div class="carousel-item">
+              <div class="img-box border rounded-circle m-auto">
+		 <img src="{%static 'images/Testimonial3.jpg'%}" class="d-block w-100 rounded-circle">
+		 
+		 </div>
+		  <h5 class="py-1 my-1 text-center"><strong class="text-warning text-uppercase">Rituparna Dasgupta</strong></h5>
+		  <p class="pt-3 text-white">I was searching a destination for holiday and after scanning through a lot of available 
+		  options we zeroed in on Bhutan the 1st country on Happiness index. Then the search began for popular travels conducting 
+		  tours to Bhutan and to my shock I found that not many popular players conduct tours to Bhutan. Once while I was scanning through 
+		  the internet i came across the site of "Naturewings" and sent an inquiry for one of the tour packages and I got a call from the director 
+		 
+		 .</p>
+		 </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo1" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+		 
+	   
+	   
+	   </div>
+	  
+	  </div>
+	</section>
+
+
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+<script>
+$(document).ready(function() {
+  $(".carousel slide").slick({
+    infinite: true,
+	interval:5000;
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: true,
+    prevArrow: $(".carousel-controls .prev"),
+    nextArrow: $(".carousel-controls .next")
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+    loop:true,
+    margin:10,
+	autoPlay: 3000, //Set AutoPlay to 3 seconds
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+});
+ 
+});
+</script>
+</body>	 
+</html>
