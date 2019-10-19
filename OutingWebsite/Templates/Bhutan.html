@@ -1,0 +1,430 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Outing.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="{%static 'css/owl.carousel.min.css '%}" rel="stylesheet">
+  <link href="{%static 'css/owl.theme.default.min.css'%}" rel="stylesheet">
+  <link href="{% static 'css/animate.min.css'%}" rel="stylesheet">
+  <link href="{%static 'css/animate.css'%}" rel="stylesheet">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+<script src="{%static 'JS/owl.carousel.min.js'%}"></script>
+  
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif
+  padding:0;
+  margin:0;
+  }
+  
+  .w3-tangerine {
+  font-family: "Tangerine", serif;
+}
+.w3-lobster {
+  font-family: "Lobster", Sans-serif;
+}
+
+.w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+.myLink {display: none}
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  .bg-img {
+  /* The image used */
+  background-image: url("D:/Images/Background.jpg");
+
+  min-height: 150px;
+    padding: 71px 0 65px 0;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+
+}
+/* Make the image fully responsive */
+  #demo.carousel-inner img {
+      width: 100%;
+      height: auto;
+	  margin:0;
+  }
+  
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+	  .carousal-caption{
+padding-bottom:120px;
+
+}
+.carousal-caption h2{
+  font-size:25px;
+
+}
+
+    }
+	#demo.carousel-control-prev, .carousel-control-next {
+            color: pink;
+            opacity: 1!important;
+          }
+        
+	#testimonial .container-fluid
+	{
+	  padding:50px;
+	  background-color:#C0C0BA;
+	 min-height:500px
+	 width:100%;
+	}
+	.card-carousel
+	{
+	  padding:100px;
+	  background-color:#C0C0BA;
+	 min-height:500px
+	}
+	.img-box
+	{
+	  width:135px;
+	  height:135px;
+	
+	}
+	#demo1.carousel-control-prev
+    {
+	  left:-50px;
+	}
+	#demol.carousel-control-next
+    {
+	  right:-50px;
+	}
+	#demo1.carousel-indicators
+	{
+	
+	bottom:50px;
+	}
+	 #owl-demo .item{
+  padding: 10px 0px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.banner
+{ 
+-webkit-background-size:cover;
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+height:100vh;
+
+}
+.carousal-caption{
+padding-bottom:300px;
+font-family:poppins;
+Bottom: 60%;
+transform: translateY(40%);
+    
+
+}
+.carousal-caption h2{
+  font-size:70px;
+  text-trasform:uppercase;
+  font-weight:bold;
+
+}
+.carousal-caption h3{
+  font-size:20px;
+  font-family:sans-serif;
+  font-style: italic
+  font-weight:bold;
+  color:#FFA500;
+  
+
+}
+.carousal-caption a{
+background:#edbbb00;
+padding:15px 35px;
+display:inline-block;
+margin-top:15px;
+color:#fff;
+text-transform:uppercase;
+border-radius:25px;
+
+
+}
+#demo2.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+  max-height:100px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+  </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+  <a class="navbar-brand" href="#"><p class="w3-tangerine w3-xlarge">Outing.com</p></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+   <ul class="navbar-nav" >
+   <li class="nav-item">
+      <a class="nav-link" href="#">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="aboutus.html">ABOUT US</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        DESTINATIONS
+      </a>
+	  
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="Bhutan.html">Bhutan</a>
+        <a class="dropdown-item" href="#section42">Darjeeling</a>
+        <a class="dropdown-item" href="#section41">North Skim</a>
+        <a class="dropdown-item" href="#section42">Old SilkRout</a>
+		<a class="dropdown-item" href="#section41">West Sikim</a>
+        <a class="dropdown-item" href="#section42">Himachal Pradesh</a>
+		<a class="dropdown-item" href="#section41">Uttarakhand</a>
+        <a class="dropdown-item" href="#section42">Goa</a>
+		<a class="dropdown-item" href="#section41">Kerala</a>
+        <a class="dropdown-item" href="#section42">Rajasthan</a>
+   
+      </div>
+      
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         PACKAGES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="BhutanPackage.html">BhutanPackages</a>
+        <a class="dropdown-item" href="SikimPackage.html">SikimPackages</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         HOTELS AND RESORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         HOT DEALS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+	 <li class="nav-item">
+      <a class="nav-link" href="#section1">CONTACT US</a>
+    </li>
+  </ul>
+  </div>
+  </div>  
+</nav>
+
+<div class="container" style="margin-top:30px;min-width:200px;min-height:500px">
+<h1>Bhutan</h1>
+<img src="{% static 'images/Bhutan1.jpg'%}" alt="Nature" class="responsive" width="500" height="400" >
+  <p>There is something magical about Bhutan, the simple yet mesmerizing land somehow manages to touch your soul, 
+  balm it with peace, and even mend the broken heart. The salubrious climate, the breathtaking views, and the majestic 
+  monasteries may seem a cliched way to describe the beauty of Bhutan, but each word used for this gorgeous country is in its purest form. 
+  Visiting and exploring Bhutan can be a wonderful experience, something you will never forget. 
+  So, do you also want to have this unforgettable experience? Yes, well, then this blog is for you. Allow me to 
+  help you with the finest Bhutan travel guide that will let you plan your Bhutan tour from India in the best possible way. 
+  Below is the step by step guide that will help you plan your tour without any hassle or confusion to this land of Thunder Dragon. So, let’s get started!</P>
+  <img src="{% static 'images/Bhutan4.jpg'%}" alt="Nature" class="responsive" width="500" height="400">
+  <h1>Ways to Reach Bhutan From India</h1>
+
+<h1>By Air:</h1>
+<p>Flying to Bhutan from India is quite easy. There are two direct airlines, namely, Drukair and Bhutan Airlines 
+that operate flights from Delhi, Gaya, Bagdogra, Kolkata, Mumbai and Guwahati to Paro, Bhutan’s only international airport. Indian travellers can be 
+offered special fares in Drukair, if the airline is contacted through email.</p>
+<h1>By Rail:</h1> 
+<p>One of the cheapest ways to reach Bhutan from India is by rail. Hasimara is the nearest railway station to Jaigaon, an Indian town on Indo-Bhutan 
+Border. It is situated at a distance of 17 kms from Jaigaon. There are trains to Hasimara from Kolkata (690 kms), Delhi (1663 kms), Ranchi (749 kms), and 
+Kanpur (1197 kms). Another station that offers a decent connectivity is situated in New Jalpaiguri. The tickets and timetable is available on Indian Railway’s IRCTC Website. 
+Though trains take longer but are quite cost efficient and are ideal for budget travellers.</p>
+<h1>By Road:</h1>
+<p>The most common way to enter Bhutan from India by road is from Jaigaon town in West Bengal. It is only 4.3 kms from the border town of Bhutan, 
+Phuentsholing. Private cabs are available between the two places. People getting down at Bagdogra (by flight) or at New Jalpaiguri (by train) can also
+avail cab services. The airport at Bagdogra have prepaid taxis as well. However, for those travelling on budget can hire the cab by directly cracking a
+deal with the cab drivers.
+</p>
+<h1>Places To Visit:</h1>
+<h1>Phuentsholing</h1>
+<img src="D:/Images/phuentsoling.jpg"  alt="Nature" width="300" height="200" style="float:left">Phuentsholing (alt. 300m / 985 ft) - The frontier town, it is a thriving commercial centre, situated directly at the base of Himalayan foothills.
+It is a fascinating place where different ethnic groups mingle prominently Indian, BhutaneseKharbandi Goenpa Phuentsholing and Nepalese. Being the 
+border town, Phuentsholing serves as the convenient entry/exit point for Bhutan and also the important link to visit the Indian state of West Bengal, 
+Sikkim and Assam.
+Places of interest in and around Phuentsholing  
+Zangtho Pelri Lhakhang
+Situated in city centre, this small temple represents the heaven of Guru Rinpoche. On ground floor there are statues of eight manifestations of Guru 
+Rinpoche and paintings on Buddha's life while the next floor contains eight Bodhisattavas and statues of Avalokiteshvara and Shabdrung Ngawang Namgyal.
+On top floor, there is a main statue of Amitabha.
+Kharbandi Goemba 
+Founded in 1967 by Royal Grand Mother, Ashi Phuntsho Choedron and situated at the altitude of 400m, this beautiful monastery contains paintings on 
+the life of Buddha, statues of Shabdrung Ngawang Namgyal and Guru Rinpoche. From the monastery garden there is a fascinating view of Phuentsholing
+ town and surrounding plains.This text appears to the right of the image. <BR CLEAR=”left” />
+<h1>Thimpu</h1>
+<img src="D:/Images/Thimpu.jpg"  alt="Nature" width="300" height="200" style="float:left">Places of interest in and around Thimphu 
+
+Thimphu is an intriguing destinations and the capital of Bhutan. The city nestled in the higher ranges of the Himalayas offers astonishing sights of their emerald forests and beautiful view of the Raidak or Chuu River. Thimphu is culturally a must visit place graced with old world charms and modernity. You might just be amazed to witness their red light to be a traffic policeman. Interestingly, the red light lasted in the city for mere three days until the locals disliked and found the light to be rather negative, hence replaced with the human traffic controller. Today, the city is flooded with camera-wielding tourists exploring the unique treasures of Bhutanese culture, cuisine and lifestyle. Basically, the top sightseeing places that are popularly explored in Thimphu are Buddha Dordenma, Memorial Chorten, Dechencholing Palace, Clock Tower Square, Motithang Takin Preserve. Other tourism places include Dzong such as Tashichhoe and Simtokha; Monasteries such as Dechen Phodrang, Tango and Cheri. For an excursion breaker, Thimphu also offers charming cafes and bars as well as nightclubs and restaurants to socialise and meet like-minded people.
+
+<h1>Paro</h1>
+<img src="D:/Images/Bhutan1.jpg"  alt="Nature" width="300" height="200" style="float:left">Paro (alt. 2200m/7218ft) - The beautiful valley of Paro encapsulates within itself a rich culture, scenic beauty and hundreds of myths and legends. It is home to many of Bhutan's oldest temples and monasteries, National Museum and country's only airport. Mount. Chomolhari (7,314m) reigns in white glory at the northern end of the valley and its glacial water plunge through deep gorges to form Pa Chhu (Paro river). Paro is also one of the most fertile valley in the Kingdom producing a bulk of the locally famous red rice from its terraced fields.
+
+Its peaceful serene beauty and clean air, surrounded by unlevelled mountains, lush green fields and historical buildings make Paro the foremost popular destination in Bhutan. It is here in the city, where the only international airport can be found. Thus, Paro receives maximum number of tourists year round. There are frequent visits to the attractive dongs such as Paro and Zuri; monasteries and palaces like Paro Taktsang (Tiger’s Nest Monastery), Pelri Goemba, Ugyen Pelri Palace. Other best tourism places include temples, monuments and museums such as Bondey Lhakhang, Khangkhu Lhakhang, Tago Lhakhang, Druk Choeding and National Museum. Paro is a historic town with peaceful atmosphere and it is best explored on foot. It is worth a stroll witnessing the everyday life of the locals which ultimately makes it a must visit place in Bhutan.
+<BR CLEAR=”left” />
+<h1>Punakha</h1>
+<img src="D:/Images/punakha.jpg"  alt="Nature" width="300" height="200" style="float:left">Another breathtaking destination in Bhutan is Punakha and this place is widely visited by adventure seekers. ‘The best place to be’ for those who enjoy the adrenaline rush of river rafting in the two rivers/chhus – Mo and Pho. However, Punakha is widely famous for the 17th-century fortress Punakha Dzong which sits majestically besides the Pho and Mo Chhu. This Himalayan town hosts masked dances and traditional music during Punakha Tshechu, a religious festival of Bhutan. The feeling the place offers is surreal, and thus many people visit here mostly to understand the Bhutanese culture and history as well as to relish its divine natural beauty. Surrounding the town in the Punakha Valley, it has some must visit attractions like Chimi Lhakhang and Namgyal Chorten. From these points, one can get a grand view of rivers and mountains. Punakha Dzong and Limbhukha are also best places to see while in Punakha.
+
+
+
+ <BR CLEAR=”left” />
+ <h1>Best time to visit Bhutan:</h1>
+<p>Bhutan is incredible throughout the year. Bhutan’s temperature and pleasant climate, cultural festivals celebrating throughout the year and abundant heritage sites provide never-ending happiness to the visitors.
+
+Bhutan’s climate varied widely depending on the altitude and covers all four seasons of spring, autumn, monsoon and winter. The weather is best in spring and autumn showcasing Rhododendron blooms at its peak.
+
+Seasons / Weather in Bhutan
+Spring Season
+March, April and May are the months of Spring and also the most beautiful time of the year. It is the peak season for tourists. The land ablaze with a spectacular array of bright colours of nature. Fruit trees are blossoming and valleys are green with fresh vegetation at this time.
+
+Must Attend Paro Tsechu Festival
+Paro Tsechu festival is celebrated by the locals and neighbouring districts with great enthusiasm during spring. This festival is the best chance to meet the King of Bhutan during this 5 days festival. Other festivals are Punakha Tshechu, Chhorten Kora, Talo Tshechu, Gasa Tshechu, Domkhar Tshechu, Rhododendron Festival and few more. View rituals and sacred dances performed by monks, join the occasion of blessings and socialising and explore the Rhododendron forests in the Phobjikha Valley.
+
+Are you looking for Festival Tour packages? Our top suggestions are
+
+5 Days Highlights of Bhutan Tour
+8 Days - Bhutan Itinerary (Gangtey Trek Bhutan)
+Monsoon Season
+June, July and August are the months of monsoon when Bhutan receives extreme rainfall than any other region in the Himalayas. It is the ideal time to avoid higher tariff and the cold of winter these days. Rainy days offer flourishing paddy fields and vibrant green foresting with a backdrop of the clear blue sky after the rain. It is the best time to visit places of cultural and historical interest however trekking is risky this season.
+
+Must Attend Festivals During Monsoon
+Visitors can plan to enjoy Bhutanese festivals like Nimalung Tshechu, Kurjey Tshechu, Haa Summer Festival and Matsutake Mushroom Festival during monsoon.
+
+
+Autumn Season
+September, October and November are the months of Autumn filled with clear and crisp blue skies. It is the peak season for the tourists. Autumn is the best time for travelling and trekking as the climate is cool and temperate at this time.
+
+The climate provides a grand view of tallest unclimbed mountains,the solitude of parks, dzongs and monasteries. Photographers can have the best photography opportunities of shedding nature, green mountains, valleys and lush green forests.
+
+
+Must Attend - Thimphu Tshechu Festival
+The Thimphu Tshechu festival is celebrated with great joy in late-September. Thimphu Tshechu and Wangdi Tshechu, both festivals occur about the same time and it is the chance to attend two grand festivals on one trip. Other attractions are Tour Of The Dragon (Bicycle Race), Gangtey Tshechu, Tamshing Phala Chhoepa, Jakar Tshechu, Black Necked Crane Festival, Mongar Tshechu, Prakhar Duchhoed, Trashigang Tshechu, Prakhar Duchhoed and few more.
+
+Recommended Tours
+
+4 Days Bhutan Tour
+
+5 Days Bhutan Tour
+
+8 Days Bhutan Trek
+‹›
+Winter Season
+December, January and February are the months of Winter. The days of winter are cool and sunny, especially December and January. During winter, most of the east-west highway remains snow bound. Winter is the ideal time to tour Thimphu, Paro, Wangdue, Haa and Punakha.
+
+One of the main attractions in this season is the Phobjikha valley to see a wide expanse of rolling plain covered with bamboo shrubs and Black-Necked Cranes. Wildlife photographers can grab this opportunity to take the aura of Bhutan.
+
+Must Attend Festivals During Winter Season.
+One must not miss to watch regional Bhutanese festivals such as Jambay Lakhang Singye Cham, Nalakhar Tshechu, Druk Wangyel Tshechu, Trongsa Tshechu, Lhuentse Tshechu, Nabji Lhakhang Drup, Takin Festival and Nomad Festival while visiting Bhutan during winter season.</p>
+</div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+<script>
+$(document).ready(function() {
+  $(".carousel slide").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: true,
+    prevArrow: $(".carousel-controls .prev"),
+    nextArrow: $(".carousel-controls .next")
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+    loop:true,
+    margin:10,
+	autoPlay: 3000, //Set AutoPlay to 3 seconds
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+});
+ 
+});
+</script>
+</body>	 
+</html>
+
+
+
+
+
+
