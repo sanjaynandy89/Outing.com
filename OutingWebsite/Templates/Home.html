@@ -22,7 +22,7 @@
 <script src="{%static 'JS/owl.carousel.min.js'%}"></script>
   
   <style>
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif;
   padding:0;
   margin:0;
   }
@@ -109,7 +109,7 @@ padding-bottom:120px;
 	{
 	  padding:50px;
 	  background-color:#C0C0BA;
-	 min-height:500px
+	 min-height:500px;
 	 width:100%;
 	}
 	.card-carousel
@@ -171,7 +171,7 @@ transform: translateY(40%);
 .carousal-caption h3{
   font-size:25px;
   font-family:sans-serif;
-  font-style: italic
+  font-style: italic;
   font-weight:bold;
   color:#FFF8DC;
   
@@ -182,7 +182,7 @@ background-color: #ff571a;
 padding:15px 35px;
 display:inline-block;
 margin-top:15px;
-font-color:;
+font-color:blue;
 text-transform:uppercase;
 border-radius:25px;
 
@@ -200,9 +200,9 @@ border-radius:25px;
 .title {
   font-size:20px;
   font-family:sans-serif;
-  font-style: italic
+  font-style: italic;
   font-weight:bold;
-  font-color:#0d0d0d
+  font-color:#0d0d0d;
 }
 .contact-form
 {
@@ -241,7 +241,7 @@ padding:20px;
       </a>
 	  
         <div class="dropdown-menu">
-        <a class="dropdown-item" href="Bhutan.html">Bhutan</a>
+        <a class="dropdown-item" href="{% url 'Destination'%}">Bhutan</a>
         <a class="dropdown-item" href="#section42">Darjeeling</a>
         <a class="dropdown-item" href="#section41">North Skim</a>
         <a class="dropdown-item" href="#section42">Old SilkRout</a>
@@ -395,105 +395,18 @@ padding:20px;
 </div>
 <div class="container-fluid" style="background-color:#8d883f">
 <div id="owl-demo" class="owl-carousel owl-theme">
-          
-  <div class="item">
-  <div class="card" style="background-color:#264040;font-color: #0d0d0d ;height:550px" >
-    <h1 class="title">Gangtok with Northsikim</h1>
-    <img class="card-img-top " src="{%static 'images/northsikim2.jpg'%}" alt="Card image cap">
-    <p class="title">4N/5D(NJP-NJP)(Gangtok 2N/Lachen 1N/Lachung 1N)</p>
-    <p class="title">Rs8,000.00PP(Min 8 Heads)</p>
-    <p class="title">Rs16,800.00PP(Min 6 Heads)</p>
-    <p class="title">Rs7,000.00PP(Min 4 Heads)</p>
-    <p class="title">Journey Date:Any Day</p>
-        </div>  
-  </div>
-  <div class="item" >
- <div class="card" style="background-color:#40367c;font-color: #0d0d0d ;height:550px" >
- <h1 class="title">Himachal with Amritsar</h1>
-  <img src="{%static 'images/manali.jpg'%}" alt="John" style="width:100%">
-  <p class="title">13N/14D(Shimla-2N/Manali-3N/Dharamshala-1N/Dalhouse-2N/Amritsar-1N)</p>
-  <p class="title">Rs16,000.00PP(Triple Sharing)</p>
-  <p class="title">Rs16,800.00PP(Double Sharing)</p>
-  <p class="title">Rs7,000.00PP(Child 5 to 8 Years)</p>
-  <p class="title">Journey Date 08.10.19</p>
-  </div>
-  </div>
-  <div class="item">
-  <div class="card" style="background-color:#0059b3;font-color #0d0d0d ;height:550px" >
- <h1 class="title">Nainital</h1>
-  <img src="{%static 'images/nainital.jpg'%}" alt="John" style="width:100%">
-  <p class="title">12N/13D(Jim Corbet-1N/Nainital-2N/Kousani-1N/Munsiyari-2N/Chakouri-1N/Almora-1N)</p>
-  <p class="title">Rs13,000.00PP(Triple Sharing)</p>
-  <p class="title">Rs14,000.00PP(Double Sharing)</p>
-  <p class="title">Rs7,000.00PP(Child 5 to 8 Years)</p>
-  <p class="title">Journey Date 13.12.19</p>
-  </div>
-  </div>
-  <div class="item">
-   <div class="card" style="background-color:#cb3434;font-color:#404040 ;height:550px" >
- <h1 class="title">Bhutan</h1>
-  <img src="{%static 'images/bhutan.jpg'%}" alt="John" style="width:100%">
-  <p class="title">5N/6D(Hasimara to Hasimara)(Jaigaon 1N/Thimu 2N/Paro 2N)</p>
-    <p class="title">Rs13,800.00PP(With Meal)/Rs.9300.00PP(Without Meal)(Min 8 Heads)</p>
-    <p class="title">Rs15,500.00PP(With Meal)/Rs.10500.00PP(Without Meal)(Min 6 Heads)</p>
-    <p class="title">Journey Date:Any Day</p>
-  </div>
-  </div>
+  {% for pkg in pkgs %}
   
   <div class="item">
-  <div class="card" style="background-color: #cccc00;font-color:#404040 ;height:550px" >
- <h1 class="title">Goa</h1>
-  <img src="{%static 'images/goa.jpg'%}" alt="John" style="width:100%">
-  <p class="title">7N/8D(Goa 4N)</p>
-   <p class="title">Rs8,500.00PP(Triple Sharing)</p>
-  <p class="title">Rs9,000.00PP(Double Sharing)</p>
-  <p class="title">Rs4,000.00PP(Child 5 to 8 Years)</p>
-  <p class="title">Journey Date 02.11.19 &11.01.2020</p>
+  <div class="card" style="background-color:#00cccc;font-color:#0d0d0d;height:550px" >
+  <h1 class="title">{{pkg.name}}</h1>
+  <img class="card-img-top " src="{{pkg.img.url}}" alt="Card image cap">
+  <p class="title">{{pkg.description}}</p>
+  </div>  
   </div>
-  </div>
-  <div class="item">
-  <div class="card" style="background-color:#91b6d4;font-color:#404040 ;height:550px" >
- <h1 class="title">Rajasthan</h1>
-  <img src="{%static 'images/rajastha1.jpg'%}" alt="John" style="width:100%">
-  <p class="title">13N/14D(Jodhpur-1N/Jaisalmer-2N/MountAbu-1N/Udaipur-2N/Puskar-1N/Jaipur-2N)</p>
-   <p class="title">Rs16,500.00PP(Triple Sharing)</p>
-  <p class="title">Rs17,500.00PP(Double Sharing)</p>
-  <p class="title">Rs8,000.00PP(Child 5 to 8 Years)</p>
-  <p class="title">Journey Date 16.10.2019</p>
-  </div>
-  </div>
-  <div class="item">
-   <div class="card" style="background-color: #d3a15f;font-color:#404040 ;height:550px" >
- <h1 class="title">Old Silk Route</h1>
-  <img src="{%static 'images/zigzagroad.jpg'%}" alt="John" style="width:100%">
-  <p class="title">3N/4D(NJP-NJP)
-    <p class="title">Rs4,800.00PP(Min 8 Heads)</p>
-    <p class="title">Rs5,350.00(Min 6 Heads)</p>
-	<p class="title">Rs7,100.00(Min 6 Heads)</p>
-	<p class="title">Journey Date:Any Day</p>
-  </div>
-  </div>
-  <div class="item">
-  <div class="card" style="background-color:#1fc71f;font-color:#1fc71f ;height:550px" >
- <h1 class="title">Bhutan</h1>
-  <img src="{%static 'images/bhutan.jpg'%}" alt="John" style="width:100%">
-  <p class="title">6N/7D(Hasimara to Hasimara)(Jaigaon 1N-Thimu 2N-Punakha 2N-Paro 2N)</p>
-    <p class="title">Rs13,800.00PP(With Meal)/Rs.9300.00PP(Without Meal)(Min 8 Heads)</p>
-    <p class="title">Rs15,500.00PP(With Meal)/Rs.10500.00PP(Without Meal)(Min 6 Heads)</p>
-    <p class="title">Journey Date:Any Day</p>
-  </div>
-  </div>
-  <div class="item">
-  <div class="card" style="background-color: #f73722;font-color:#1fc71f ;height:550px" >
- <h1 class="title">Kerala With KanyaKumari </h1>
-  <img src="{%static 'images/keralanature.jpg'%}" alt="John" style="width:100%">
-  <p class="title">12N/13D(Kanyakumari-2N/Kovalam-2N/Alleppey-1N/Thekady-1N/Munnar-2N)</p>
-   <p class="title">Rs16,000.00PP(Triple Sharing)</p>
-  <p class="title">Rs17,000.00PP(Double Sharing)</p>
-  <p class="title">Rs8,000.00PP(Child 5 to 8 Years)</p>
-  <p class="title">Journey Date 20.11.2019</p>
-  </div>
-  </div>
+ 
+  {% endfor %}
+  
  
 </div>
 </div>
@@ -613,7 +526,7 @@ padding:20px;
 $(document).ready(function() {
   $(".carousel slide").slick({
     infinite: true,
-	interval:5000;
+	interval:5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
