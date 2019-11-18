@@ -8,6 +8,6 @@ path('',views.HomePage,name='HomePage'),
 path('Destination/',views.DestinationPage,name='Destination'),
 path('Test/',views.get_name,name='getname'),
 path('your_name/',views.get_name,name='getname'),
-path('contact/',views.contact_form,name='getname'),
+path('contact/',views.send_email,name='contact'),
 path('Home/PackagesRest/',views.packages_collection),
 ]

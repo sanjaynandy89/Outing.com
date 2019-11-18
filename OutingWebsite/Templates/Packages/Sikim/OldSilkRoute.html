@@ -1,0 +1,747 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Outing.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="{%static 'css/owl.carousel.min.css '%}" rel="stylesheet">
+  <link href="{%static 'css/owl.theme.default.min.css'%}" rel="stylesheet">
+  <link href="{% static 'css/animate.min.css'%}" rel="stylesheet">
+  <link href="{%static 'css/animate.css'%}" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+<script src="{%static 'JS/owl.carousel.min.js'%}"></script>
+  
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif
+    padding:0;
+    margin:0;
+    }
+    .w3-tangerine {
+    font-family: "Tangerine", serif;
+  }
+  .w3-lobster {
+    font-family: "Lobster", Sans-serif;
+  }
+  
+  .w3-myfont {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+  .myLink {display: none}
+    .fakeimg {
+      height: 200px;
+      background: #aaa;
+    }
+    .bg-img {
+   /* The image used */
+    background-image: url("D:/Images/Background.jpg");
+  
+    min-height: 150px;
+      padding: 71px 0 65px 0;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Needed to position the navbar */
+    position: relative;
+  
+  }
+  /* Make the image fully responsive */
+    #demo.carousel-inner img {
+        width: 100%;
+        height: auto;
+      margin:0;
+    }
+    
+      #carouselExampleControls.carousel-inner banner
+    {
+     width: 100%;
+        height: auto;
+      margin:0;
+    }
+      /* Set gray background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+      
+      /* Set black background color, white text and some padding */
+      footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+      }
+      
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 768px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;}
+      .carousal-caption{
+  padding-bottom:120px;
+  
+  }
+  .carousal-caption h2{
+    font-size:25px;
+  
+  }
+  
+      }
+    #demo.carousel-control-prev, .carousel-control-next {
+              color: pink;
+              opacity: 1!important;
+            }
+          
+    #testimonial .container-fluid
+    {
+      padding:50px;
+      background-color:#C0C0BA;
+     min-height:500px
+     width:100%;
+    }
+    .card-carousel
+    {
+      padding:100px;
+      background-color:#C0C0BA;
+     min-height:500px
+    }
+    .img-box
+    {
+      width:135px;
+      height:135px;
+    
+    }
+    #demo1.carousel-control-prev
+      {
+      left:-50px;
+    }
+    #demol.carousel-control-next
+      {
+      right:-50px;
+    }
+    #demo1.carousel-indicators
+    {
+    
+    bottom:50px;
+    }
+     #owl-demo .item{
+    padding: 10px 0px;
+    margin: 10px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+  }
+  .banner
+  { 
+  -webkit-background-size:cover;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  height:100vh;
+  
+  }
+  
+  .carousal-caption{
+  padding-bottom:300px;
+  font-family:poppins;
+  Bottom: 60%;
+  transform: translateY(40%);
+  }
+  .carousal-caption h2{
+    font-size:70px;
+    text-trasform:uppercase;
+    font-weight:bold;
+  
+  }
+  .carousal-caption h3{
+    font-size:25px;
+    font-family:sans-serif;
+    font-style: italic
+    font-weight:bold;
+    color:#FFF8DC;
+    
+  
+  }
+  .carousal-caption a{
+  background-color: #ff571a;
+  padding:15px 35px;
+  display:inline-block;
+  margin-top:15px;
+  font-color:;
+  text-transform:uppercase;
+  border-radius:25px;
+  
+  
+  }
+  #demo2.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 150px;
+    max-height:100px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .title {
+    font-size:20px;
+    font-family:sans-serif;
+    font-style: italic
+    font-weight:bold;
+    font-color:#0d0d0d
+  }
+  .contact-form
+  {
+  backgorund:rgba(0,0,0,.6);
+  padding:20px;
+  
+  }
+  #carouselExampleControls.carousal
+  {
+   position: relative;
+   width: 100%;
+   padding-top: 100%; /* 1:1 Aspect Ratio */
+  
+  }
+  /* Style tab links */
+  .tablink {
+    background-color:#80b380;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 14.28%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    width:100%;
+  }
+  
+  #Overview {background-color:RosyBrown;}
+  #Itinerary {background-color: RosyBrown;}
+  #Includes{background-color: RosyBrown;}
+  #Photos {background-color: RosyBrown;}
+  #Actvites {background-color: RosyBrown;}
+  #Excludes {background-color: RosyBrown;}
+  #Videos {background-color: RosyBrown;}
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .container.tabcontent.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+    
+    #ImageText.container-fluid {
+    position: relative; 
+    max-width:800px ;/* Maximum width */
+    margin: 0  ; /* Center it */
+  }
+  
+  #ImageText1{
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 96%; /* Full width */
+    padding:50px; /* Some padding */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md bg-light navbar-light fixed-right">
+  <a class="navbar-brand" href="HomePage.html"><p class="w3-tangerine w3-xlarge">Outing.com</p></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+   <ul class="navbar-nav" >
+   <li class="nav-item">
+      <a class="nav-link" href="#">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="aboutus.html">ABOUT US</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        DESTINATIONS
+      </a>
+	  
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="{% url 'Destination'%}">Bhutan</a>
+        <a class="dropdown-item" href="#section42">Darjeeling</a>
+        <a class="dropdown-item" href="#section41">North Skim</a>
+        <a class="dropdown-item" href="#section42">Old SilkRout</a>
+		<a class="dropdown-item" href="#section41">West Sikim</a>
+        <a class="dropdown-item" href="#section42">Himachal Pradesh</a>
+		<a class="dropdown-item" href="#section41">Uttarakhand</a>
+        <a class="dropdown-item" href="#section42">Goa</a>
+		<a class="dropdown-item" href="#section41">Kerala</a>
+        <a class="dropdown-item" href="#section42">Rajasthan</a>
+   
+      </div>
+      
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         PACKAGES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="BhutanPackage.html">BhutanPackages</a>
+        <a class="dropdown-item" href="{%url 'SikimPackages'%}">SikimPackages</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         HOTELS AND RESORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         OFFBEAT
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+	 <li class="nav-item">
+      <a class="nav-link" href="{% url 'contact' %}">CONTACT US</a>
+    </li>
+  </ul>
+  </div>
+  </div>  
+</nav>
+
+<div id="ImageText"class="container-fluid">
+   
+
+    <img src="{% static 'images/sikim1.jpg'%}" alt="Notebook" style="width:100%;">
+<div id="ImageText1" class="content">
+
+  <h1>Old Silk Route</h1>
+  <div class="row">
+  <div class="col">
+  <p>3N/4D (NJP-NJP)</p>
+  <p>Rs.4,800.00 PP (Min 8 Heads)<br/>
+     Rs.5,350.00 PP(Min 6 Heads)<br/>
+     RS.7,100.00 PP(Min 4 Heads)</p>
+  </div>
+  <div class="col">
+  <p>4N/5D (NJP-NJP)</p>
+  <p>Rs.6,200.00 PP (Min 8 Heads)<br/>
+     Rs.6,900.00 PP(Min 6 Heads)<br/>
+     RS.9,100.00 PP(Min 4 Heads)</p>
+  </div>   
+  </div>
+  <div class="row">
+  <p>Journey Date:ANY DAY  </p>
+  </div>
+  
+</div>
+</div>
+<div class="container-fluid" style="min-height:500px;background-color:SeaShell">
+<button class="tablink" onclick="openPage('Overview', this, 'RosyBrown')">Overview</button>
+<button class="tablink" onclick="openPage('Itinerary', this, 'RosyBrown')" id="defaultOpen">Itinerary</button>
+<button class="tablink" onclick="openPage('Includes', this, 'RosyBrown')">Includes</button>
+<button class="tablink" onclick="openPage('Excludes', this, 'RosyBrown')">Excludes</button>
+<button class="tablink" onclick="openPage('Activities', this, 'RosyBrown')">Activites</button>
+<button class="tablink" onclick="openPage('Photos', this, 'RosyBrown')">Photos</button>
+<button class="tablink" onclick="openPage('Videos', this, 'RosyBrown')" id="defaultOpen">Videos</button>
+
+
+
+
+<div id="Overview" class="tabcontent">
+<h1>PACKAGE NAME - WONDERFUL SILK ROUTE 4N/5D</h1>
+<p>
+Ramdhura-1 Night , Zuluk -1 Night , Nathang-1 Night , Rangpokhola- 1 Night.</p>
+
+<p>Pickup- NJP or Bagdogra or Siliguri Bus Stand Drop - NJP or Bagdogra or Siliguri Bus Stand</p>
+
+<p>Meals include - Breakfast, Lunch (Egg Curry ), Evening Snacks, Dinner (Chicken) in Silk Route.</p>
+
+<p>All our packages are personalized with private vehicle as per your chosen date .Hence Package price depends on
+Choice of itinerary / Duration
+
+No of Guests
+
+Choice of Hotel Category
+
+Choice of Transport</p>
+
+<p>Please Note- Each member should carry original voter card or Passport or Driving license (Pan card and Aadhar Card are not valid) along with four copies of Xerox and 3 copies of passport size photographs. In case of child you can carry School ID proof and Birth certificate along with photographs.
+</p>
+</div>
+
+<div id="Itinerary" class="tabcontent">
+<h1>DAY 1 - NJP/IXB TO RAMDHURA</h1>
+<p>Meet & greet on arrival at NJP/IXB and drive for 3 HRS to Ramdhura , a god gifted Jem in Darjeeling hill overlooking 180 degree Mt Kanchenjunga from your cottage. You can also do a soft trek to nearby Forest Village
+
+Overnight in Ramdhura.</p>
+
+<h2>DAY 2 - RAMDHURA TO ZULUK</h2>
+<p>After Breakfast we will start for Zuluk via Rongli Dam, Lingtam, Keukhela Falls, Phadamchen, and finally reach Zuluk.</p>
+
+<p>Overnight in Zuluk.</p>
+
+<h2>DAY 3 - ZULUK TO NATHANG</h1>
+<p>After Breakfast , enjoy the beauty of Thambi View Point, 95 Turns,Lungthung, LaxmanChowk, , GNathang Valley, Tukla Valley, Kalapokhari, Old Baba Mandir, Four Lake Point, Memencho Lake, Jelep-la Pass View and reach Kupup 13,900ft. Donâ€™t miss the Elephant lake At Kupup, see the Worldâ€™s highest Golf course, the Yak Golf Course at 13,025 ft (Guinness Book Of World Records acclaimed), and the Ice Hockey ground. Here also see the highest cool water polo ground at kupup.
+</p>
+<p>Overnight in Nathang..</p>
+
+<h2>DAY 4 -NATHANG TO RANGPOKHOLA</h2>
+<p>After break fast start for Rongpokhola. You can take a bath in Rongpo River and then Enjoy lunch in the riverside and the music of Rongpo River from the cottage.
+</p>
+<p>Over night in Rongpokhola.</p>
+
+<h2>DAY 5 - RANGPOKHOLA TO NJP/IXB DROP</h2>
+<p>After breakfast proceed towards NJP/IXB with a sweet silk route memory.</p>
+</div>
+<div id="Includes" class="tabcontent">
+<p> 
+TOUR INCLUDES
+
+Pick up and drop from NJP
+Accommodation in Double/ Triple sharing Homestays for 04 nights
+Meal (Veg/ Non-Veg: MAP Plan) – Lunch Time will be on Transit, so we provide Lunch when you are in our Homestay, no Packed Lunch can be provided
+All Taxes and Service charges</p>
+</div>
+
+<div id="Excludes" class="tabcontent">
+<p> TOUR EXCLUDES
+
+Mineral Water, Soft Drinks, Laundry Charges, Phone Calls, Tips etc.
+Any kind of Insurance, Medical or/and Emergency Charges
+Any extra meals not included in the above itinerary
+Things not mentioned in Tour Includes Section</p>
+</div>
+<div id="Activites" class="tabcontent">
+
+</div>
+<div id="Photos" class="tabcontent">
+<div class="container">
+<div class="mySlides">
+  <div class="numbertext">1 / 6</div>
+  <img src="D:/Images/bhutan.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 6</div>
+  <img src="D:/Images/nainital.jpg"" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 6</div>
+  <img src="D:/Images/northsikim2.jpg"" style="width:100%">
+</div>
+  
+<div class="mySlides">
+  <div class="numbertext">4 / 6</div>
+  <img src="D:/Images/goa.jpg"" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">5 / 6</div>
+  <img src="D:/Images/manali.jpg"" style="width:100%">
+</div>
+  
+<div class="mySlides">
+  <div class="numbertext">6 / 6</div>
+  <img src="D:/Images/rajastha1.jpg"" style="width:100%">
+</div>
+  
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+<div class="caption-container">
+  <p id="caption"></p>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img class="demo cursor" src="D:/Images/bhutan.jpg"" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="D:/Images/nainital.jpg"" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="D:/Images/northsikim2.jpg"" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="D:/Images/goa.jpg"" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="D:/Images/manali.jpg"" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+  </div>    
+  <div class="column">
+    <img class="demo cursor" src="D:/Images/rajastha1.jpg"" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+  </div>
+</div>
+</div>
+</div>
+<div id="Videos" class="tabcontent">
+<h3>Contact</h3>
+<p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+
+ 
+</div>
+<!-- Contact -->
+
+
+
+<footer class="container-fluid text-center">
+<p>Footer Text</p>
+</footer>
+<script>
+$(document).ready(function() {
+$(".carousel slide").slick({
+  infinite: true,
+  interval:5000;
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  arrows: true,
+  prevArrow: $(".carousel-controls .prev"),
+  nextArrow: $(".carousel-controls .next")
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+
+$("#owl-demo").owlCarousel({
+  loop:true,
+  margin:10,
+  autoPlay: 3000, //Set AutoPlay to 3 seconds
+  responsiveClass:true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      600:{
+          items:3,
+          nav:false
+      },
+      1000:{
+          items:4,
+          nav:true,
+          loop:false
+      }
+  }
+});
+
+});
+</script>
+<script>
+function openPage(pageName,elmnt,color) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablink");
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].style.backgroundColor = "";
+}
+document.getElementById(pageName).style.display = "block";
+elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+var captionText = document.getElementById("caption");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>	 
+</html>
+
+
+
+
+
