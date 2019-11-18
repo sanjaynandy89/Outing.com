@@ -1,10 +1,16 @@
 <html>
     <body>
      <h1>hello world</h1>   
+<<<<<<< HEAD
      <form action="/your_name/" method="post">
       {% csrf_token %}
       {{ form }}
       <input type="submit" value="Submit">
   </form>
+=======
+     {%for pkg in pkgs%}  
+      <h1>pkg.name</h1>
+      {% endfor %}
+>>>>>>> e58bad138431c0049b452fb852cfdd877df197a6
     </body>
 </html>

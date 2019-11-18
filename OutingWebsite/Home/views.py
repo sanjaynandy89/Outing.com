@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Packages
+<<<<<<< HEAD
 from .forms import NameForm
 from .forms import ContactForm
 from django.http import HttpResponseRedirect
@@ -76,3 +77,10 @@ def packages_collection(self,request):
         Pkgs1 = Packages.objects.all()
         serializer = PackagesSerializer(Pkgs1, many=True)
         return Response(serializer.data)
+=======
+def HomePage(request):
+     pkgs=Packages.objects.all()
+     return render(request,'Home.html',{'pkgs':pkgs})
+def DestinationPage(request):
+     return render(request,'Bhutan.html')     
+>>>>>>> e58bad138431c0049b452fb852cfdd877df197a6
